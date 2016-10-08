@@ -1,8 +1,4 @@
-var routerApp=angular.module('routerApp',[
+var routerApp=angular.module('demoApp',[
     'ui.router',
-    'angular-confirm',
-    'Pagination',
-    'bootstrapLightbox',
-    'summernote',
     'ngResource'
 ]);

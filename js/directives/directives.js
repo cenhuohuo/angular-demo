@@ -1,11 +1,8 @@
-angular.module('routerApp').directive("clickOnce",[function(){
+angular.module('demoApp').directive("demoDirective",[function(){
 	return {
-		restrict: "A",
+		restrict: "EA",
 		link: function(scope, elem, attrs){
-			elem.on("click",function(e){
-				e.preventDefault();
-				elem.addClass("disabled").prop("disabled",true);
-			})
+			
 		}
 	}
 }])

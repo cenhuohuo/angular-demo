@@ -1,2 +1,2 @@
 # angular-demo
-基于angular的项目结构事例
+基于angular的项目结构举例

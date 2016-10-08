@@ -7,5 +7,20 @@
 	bottom: 0;
 }
 .login-wrap{
-	
+	background-color: #36D7B7;
+}
+.wrap ul{
+	width: 100%;
+}
+.wrap li a{
+	cursor: pointer;
+	font-size: 28px;
+	color: #fff;
+	text-decoration: none;
+}
+.wrap li a:hover{
+	text-decoration: underline;
+}
+.main-wrap{
+	background-color: #26C281;
 }

@@ -1,4 +1,4 @@
-angular.module('routerApp').factory('httpInterceptors', ['$rootScope', "$q", "$location", "session", function ($rootScope, $q, $location, session) {
+angular.module('demoApp').factory('httpInterceptors', ['$rootScope', "$q", "$location", function ($rootScope, $q, $location) {
     return {
         request: function (config) {
             config.headers['X-API-Version'] = 'web-browser-1.0.0';
@@ -13,13 +13,7 @@ angular.module('routerApp').factory('httpInterceptors', ['$rootScope', "$q", "$l
          },*/
         responseError: function (resError) {
             if (resError.status == 401) {
-                session.clear();
-                if (session.hasWrap()) {
-                    window.location.href = '/elife_wrap/#/authority';
-                }
-                else {
-                    $location.path('/index');
-                }
+                $location.path('/index');
             } else if (resError.status == 500) {
                 alert('服务器错误！！！500')
             } else if (resError.status == 502) {

@@ -1,8 +1,5 @@
-angular.module('routerApp').factory('account', ["$resource","settings", function ($resource, settings) {
+angular.module('demoApp').factory('account', ["$resource","settings", function ($resource, settings) {
     return $resource(settings.accountUrl + 'user/phone/exist/:phone', {}, {
-        exist: {
-            method: 'GET'
-        },
         login:{
             method: 'POST',
             url: settings.accountUrl + "user/login",
