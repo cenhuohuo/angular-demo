@@ -1,0 +1,55 @@
+
+angular.module("routerApp").factory("goodsDuobao",["$resource","settings",function($resource,settings){
+    return $resource(null,null,{
+        getList:{
+            method:"POST",
+            url:settings.mallAdminUrl+"playluckgoods/goods/admin/listAll"
+        },
+        getPutawayGoodsList:{
+            method:"POST",
+            url:settings.mallAdminUrl+"playluckgoods/goods/admin/listAllPutawayGoods"
+        },
+        getUndercarriageGoodsList:{
+            method:"POST",
+            url:settings.mallAdminUrl+"playluckgoods/goods/admin/listAllUndercarriageGoods"
+        },
+        getSoldOutGoodsList:{
+            method:"POST",
+            url:settings.mallAdminUrl+"playluckgoods/goods/admin/listSoldOutAll"
+        },
+        //使用模板
+        putaway:{
+            method:"POST",
+            url:settings.mallAdminUrl+"playluckgoods/goods/admin/putaway",
+            headers: {"Content-Type": "application/x-www-form-urlencoded"}
+        },
+        //商品下架
+        undercarriage:{
+            method:"GET",
+            url:settings.mallAdminUrl+"playluckgoods/goods/admin/undercarriage",
+            params:{
+                
+            }
+        },
+        //查看往期订单
+        getHistoryList:{
+            method:"GET",
+            url:settings.mallAdminUrl+"playluckorder/admin/prize/history"
+        },
+        //查看往期详情
+        getHistoryDetail:{
+            method:"GET",
+            url:settings.mallAdminUrl+"playluckorder/admin/prize/history/detail"
+        },
+        //查看详情
+        getDetail:{
+            method:"GET",
+            url:settings.mallAdminUrl+"playluckgoods/goods/admin/listByGoodsModuleCode"
+        },
+        //商品编辑
+        editGoods:{
+            method:"POST",
+            url:settings.mallAdminUrl+"playluckgoods/goods/admin/editor"
+        }
+    })
+}])

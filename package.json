@@ -1,0 +1,22 @@
+{
+  "name": "haiwan_app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-clean-css": "^2.0.11",
+    "gulp-concat": "^2.6.0",
+    "gulp-uglify": "^1.5.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@rep.360taihe.com:frontend/haiwan_app.git"
+  },
+  "author": "",
+  "license": "ISC"
+}
